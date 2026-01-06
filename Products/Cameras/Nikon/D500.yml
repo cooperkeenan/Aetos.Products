@@ -1,0 +1,20 @@
+brand: Nikon
+model: D500
+full_name: Nikon D500
+category: DSLR
+
+pricing:
+  buy_min: 100
+  buy_max: 500
+  sell_target: 650
+
+aliases:
+- d500
+- nikon d500
+
+fuzzy_patterns:
+- nikkon d500
+- nikon d 500
+- d500 body
+
+active: true

@@ -1,0 +1,20 @@
+brand: Nikon
+model: D3300
+full_name: Nikon D3300
+category: DSLR
+
+pricing:
+  buy_min: 80
+  buy_max: 100
+  sell_target: 180
+
+aliases:
+- d3300
+- nikon d3300
+
+fuzzy_patterns:
+- nikkon d3300
+- nikon d 3300
+- d3300 body
+
+active: true

@@ -1,0 +1,21 @@
+brand: Nikon
+model: D810
+full_name: Nikon D810
+category: DSLR
+
+pricing:
+  buy_min: 300
+  buy_max: 600
+  sell_target: 800
+
+aliases:
+- d810
+- nikon d810
+
+fuzzy_patterns:
+- nikkon d810
+- nikon d 810
+- d810 body
+- d810 camera
+
+active: true

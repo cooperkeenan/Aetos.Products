@@ -1,0 +1,25 @@
+brand: Canon
+model: 500D
+full_name: Canon EOS 500D / Rebel T1i
+category: DSLR
+
+pricing:
+  buy_min: 40
+  buy_max: 80
+  sell_target: 130
+
+aliases:
+- 500d
+- eos 500d
+- rebel t1i
+- t1i
+- kiss x3
+
+fuzzy_patterns:
+- cannon 500d
+- canon 500 d
+- rebel t1i
+- t1i
+- kiss x3
+
+active: true

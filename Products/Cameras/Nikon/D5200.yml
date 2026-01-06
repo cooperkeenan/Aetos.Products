@@ -1,0 +1,20 @@
+brand: Nikon
+model: D5200
+full_name: Nikon D5200
+category: DSLR
+
+pricing:
+  buy_min: 80
+  buy_max: 110
+  sell_target: 200
+
+aliases:
+- d5200
+- nikon d5200
+
+fuzzy_patterns:
+- nikkon d5200
+- nikon d 5200
+- d5200 body
+
+active: true

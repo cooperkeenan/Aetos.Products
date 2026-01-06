@@ -1,0 +1,20 @@
+brand: Nikon
+model: D90
+full_name: Nikon D90
+category: DSLR
+
+pricing:
+  buy_min: 30
+  buy_max: 50
+  sell_target: 80
+
+aliases:
+- d90
+- nikon d90
+
+fuzzy_patterns:
+- nikkon d90
+- nikon d 90
+- d90 body
+
+active: true

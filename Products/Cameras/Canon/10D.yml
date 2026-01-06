@@ -1,0 +1,22 @@
+brand: Canon
+model: 10D
+full_name: Canon EOS 10D
+category: DSLR
+
+pricing:
+  buy_min: 10
+  buy_max: 10
+  sell_target: 50
+
+aliases:
+- 10d
+- eos 10d
+- canon 10d
+
+fuzzy_patterns:
+- cannon 10d
+- canon 10 d
+- eos10d
+- 10d body
+
+active: true

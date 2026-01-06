@@ -1,0 +1,25 @@
+brand: Canon
+model: 350D
+full_name: Canon EOS 350D / Rebel XT
+category: DSLR
+
+pricing:
+  buy_min: 20
+  buy_max: 50
+  sell_target: 90
+
+aliases:
+- 350d
+- eos 350d
+- rebel xt
+- xt
+- kiss n
+
+fuzzy_patterns:
+- cannon 350d
+- canon 350 d
+- rebel xt
+- xt
+- kiss n
+
+active: true

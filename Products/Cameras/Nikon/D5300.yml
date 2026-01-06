@@ -1,0 +1,20 @@
+brand: Nikon
+model: D5300
+full_name: Nikon D5300
+category: DSLR
+
+pricing:
+  buy_min: 80
+  buy_max: 200
+  sell_target: 280
+
+aliases:
+- d5300
+- nikon d5300
+
+fuzzy_patterns:
+- nikkon d5300
+- nikon d 5300
+- d5300 body
+
+active: true

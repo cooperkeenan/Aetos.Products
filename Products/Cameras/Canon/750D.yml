@@ -1,0 +1,24 @@
+brand: Canon
+model: 750D
+full_name: Canon EOS 750D / Rebel T6i
+category: DSLR
+
+pricing:
+  buy_min: 80
+  buy_max: 200
+  sell_target: 260
+
+aliases:
+- 750d
+- eos 750d
+- rebel t6i
+- t6i
+
+fuzzy_patterns:
+- cannon 750d
+- canon 750 d
+- rebel t6i
+- t6i
+- kiss x8i
+
+active: true

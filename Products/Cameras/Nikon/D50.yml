@@ -1,0 +1,20 @@
+brand: Nikon
+model: D50
+full_name: Nikon D50
+category: DSLR
+
+pricing:
+  buy_min: 10
+  buy_max: 30
+  sell_target: 60
+
+aliases:
+- d50
+- nikon d50
+
+fuzzy_patterns:
+- nikkon d50
+- nikon d 50
+- d50 body
+
+active: true

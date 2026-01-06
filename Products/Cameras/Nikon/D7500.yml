@@ -1,0 +1,20 @@
+brand: Nikon
+model: D7500
+full_name: Nikon D7500
+category: DSLR
+
+pricing:
+  buy_min: 100
+  buy_max: 300
+  sell_target: 450
+
+aliases:
+- d7500
+- nikon d7500
+
+fuzzy_patterns:
+- nikkon d7500
+- nikon d 7500
+- d7500 body
+
+active: true

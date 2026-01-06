@@ -1,0 +1,25 @@
+brand: Canon
+model: 1100D
+full_name: Canon EOS 1100D / Rebel T3
+category: DSLR
+
+pricing:
+  buy_min: 60
+  buy_max: 120
+  sell_target: 160
+
+aliases:
+- 1100d
+- eos 1100d
+- rebel t3
+- t3
+- kiss x50
+
+fuzzy_patterns:
+- cannon 1100d
+- canon 1100 d
+- rebel t3
+- t3
+- kiss x50
+
+active: true

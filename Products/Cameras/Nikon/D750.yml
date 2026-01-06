@@ -1,0 +1,21 @@
+brand: Nikon
+model: D750
+full_name: Nikon D750
+category: DSLR
+
+pricing:
+  buy_min: 80
+  buy_max: 350
+  sell_target: 450
+
+aliases:
+- d750
+- nikon d750
+
+fuzzy_patterns:
+- nikkon d750
+- nikon d 750
+- d750 body
+- d750 camera
+
+active: true

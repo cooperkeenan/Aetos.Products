@@ -1,0 +1,20 @@
+brand: Nikon
+model: D3500
+full_name: Nikon D3500
+category: DSLR
+
+pricing:
+  buy_min: 80
+  buy_max: 200
+  sell_target: 290
+
+aliases:
+- d3500
+- nikon d3500
+
+fuzzy_patterns:
+- nikkon d3500
+- nikon d 3500
+- d3500 body
+
+active: true

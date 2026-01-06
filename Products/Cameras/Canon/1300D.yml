@@ -1,0 +1,25 @@
+brand: Canon
+model: 1300D
+full_name: Canon EOS 1300D / Rebel T6
+category: DSLR
+
+pricing:
+  buy_min: 80
+  buy_max: 150
+  sell_target: 200
+
+aliases:
+- 1300d
+- eos 1300d
+- rebel t6
+- t6
+- kiss x80
+
+fuzzy_patterns:
+- cannon 1300d
+- canon 1300 d
+- rebel t6
+- t6
+- kiss x80
+
+active: true

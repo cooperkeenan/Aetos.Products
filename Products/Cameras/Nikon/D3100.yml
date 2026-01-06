@@ -1,0 +1,20 @@
+brand: Nikon
+model: D3100
+full_name: Nikon D3100
+category: DSLR
+
+pricing:
+  buy_min: 40
+  buy_max: 70
+  sell_target: 130
+
+aliases:
+- d3100
+- nikon d3100
+
+fuzzy_patterns:
+- nikkon d3100
+- nikon d 3100
+- d3100 body
+
+active: true

@@ -1,0 +1,20 @@
+brand: Nikon
+model: D5600
+full_name: Nikon D5600
+category: DSLR
+
+pricing:
+  buy_min: 80
+  buy_max: 250
+  sell_target: 350
+
+aliases:
+- d5600
+- nikon d5600
+
+fuzzy_patterns:
+- nikkon d5600
+- nikon d 5600
+- d5600 body
+
+active: true

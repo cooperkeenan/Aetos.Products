@@ -1,0 +1,20 @@
+brand: Nikon
+model: D3200
+full_name: Nikon D3200
+category: DSLR
+
+pricing:
+  buy_min: 50
+  buy_max: 90
+  sell_target: 160
+
+aliases:
+- d3200
+- nikon d3200
+
+fuzzy_patterns:
+- nikkon d3200
+- nikon d 3200
+- d3200 body
+
+active: true

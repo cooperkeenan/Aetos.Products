@@ -1,0 +1,26 @@
+brand: Canon
+model: 600D
+full_name: Canon EOS 600D / Rebel T3i
+category: DSLR
+
+pricing:
+  buy_min: 70
+  buy_max: 100
+  sell_target: 150
+
+aliases:
+- 600d
+- eos 600d
+- rebel t3i
+- t3i
+- kiss x5
+
+fuzzy_patterns:
+- cannon 600d
+- canon 600 d
+- rebel t3i
+- t3i
+- kiss x5
+- canon d600
+
+active: true

@@ -1,0 +1,21 @@
+brand: Nikon
+model: D800
+full_name: Nikon D800
+category: DSLR
+
+pricing:
+  buy_min: 250
+  buy_max: 450
+  sell_target: 600
+
+aliases:
+- d800
+- nikon d800
+
+fuzzy_patterns:
+- nikkon d800
+- nikon d 800
+- d800 body
+- d800 camera
+
+active: true

@@ -1,0 +1,22 @@
+brand: Canon
+model: 30D
+full_name: Canon EOS 30D
+category: DSLR
+
+pricing:
+  buy_min: 10
+  buy_max: 20
+  sell_target: 60
+
+aliases:
+- 30d
+- eos 30d
+- canon 30d
+
+fuzzy_patterns:
+- cannon 30d
+- canon 30 d
+- eos30d
+- 30d body
+
+active: true

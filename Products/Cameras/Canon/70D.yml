@@ -1,0 +1,22 @@
+brand: Canon
+model: 70D
+full_name: Canon EOS 70D
+category: DSLR
+
+pricing:
+  buy_min: 80
+  buy_max: 140
+  sell_target: 220
+
+aliases:
+- 70d
+- eos 70d
+- canon 70d
+
+fuzzy_patterns:
+- cannon 70d
+- canon 70 d
+- eos70d
+- 70d body
+
+active: true

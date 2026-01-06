@@ -1,0 +1,20 @@
+brand: Nikon
+model: D3400
+full_name: Nikon D3400
+category: DSLR
+
+pricing:
+  buy_min: 80
+  buy_max: 90
+  sell_target: 170
+
+aliases:
+- d3400
+- nikon d3400
+
+fuzzy_patterns:
+- nikkon d3400
+- nikon d 3400
+- d3400 body
+
+active: true

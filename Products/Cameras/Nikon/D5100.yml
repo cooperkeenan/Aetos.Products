@@ -1,0 +1,20 @@
+brand: Nikon
+model: D5100
+full_name: Nikon D5100
+category: DSLR
+
+pricing:
+  buy_min: 80
+  buy_max: 100
+  sell_target: 180
+
+aliases:
+- d5100
+- nikon d5100
+
+fuzzy_patterns:
+- nikkon d5100
+- nikon d 5100
+- d5100 body
+
+active: true

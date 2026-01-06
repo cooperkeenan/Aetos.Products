@@ -1,0 +1,22 @@
+brand: Canon
+model: 50D
+full_name: Canon EOS 50D
+category: DSLR
+
+pricing:
+  buy_min: 30
+  buy_max: 70
+  sell_target: 120
+
+aliases:
+- 50d
+- eos 50d
+- canon 50d
+
+fuzzy_patterns:
+- cannon 50d
+- canon 50 d
+- eos50d
+- 50d body
+
+active: true

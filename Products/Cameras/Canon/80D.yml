@@ -1,0 +1,22 @@
+brand: Canon
+model: 80D
+full_name: Canon EOS 80D
+category: DSLR
+
+pricing:
+  buy_min: 100
+  buy_max: 250
+  sell_target: 350
+
+aliases:
+- 80d
+- eos 80d
+- canon 80d
+
+fuzzy_patterns:
+- cannon 80d
+- canon 80 d
+- eos80d
+- 80d body
+
+active: true

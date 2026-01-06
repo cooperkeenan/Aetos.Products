@@ -1,0 +1,22 @@
+brand: Canon
+model: 20D
+full_name: Canon EOS 20D
+category: DSLR
+
+pricing:
+  buy_min: 10
+  buy_max: 20
+  sell_target: 50
+
+aliases:
+- 20d
+- eos 20d
+- canon 20d
+
+fuzzy_patterns:
+- cannon 20d
+- canon 20 d
+- eos20d
+- 20d body
+
+active: true

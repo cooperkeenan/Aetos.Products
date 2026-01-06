@@ -1,0 +1,23 @@
+brand: Canon
+model: 300D
+full_name: Canon EOS 300D / Rebel Digital
+category: DSLR
+
+pricing:
+  buy_min: 15
+  buy_max: 40
+  sell_target: 70
+
+aliases:
+- 300d
+- eos 300d
+- rebel digital
+- kiss digital
+
+fuzzy_patterns:
+- cannon 300d
+- canon 300 d
+- rebel digital
+- kiss digital
+
+active: true

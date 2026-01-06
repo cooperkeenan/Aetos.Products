@@ -1,0 +1,20 @@
+brand: Nikon
+model: D7200
+full_name: Nikon D7200
+category: DSLR
+
+pricing:
+  buy_min: 80
+  buy_max: 230
+  sell_target: 320
+
+aliases:
+- d7200
+- nikon d7200
+
+fuzzy_patterns:
+- nikkon d7200
+- nikon d 7200
+- d7200 body
+
+active: true

@@ -1,0 +1,25 @@
+brand: Canon
+model: 400D
+full_name: Canon EOS 400D / Rebel XTi
+category: DSLR
+
+pricing:
+  buy_min: 30
+  buy_max: 80
+  sell_target: 130
+
+aliases:
+- 400d
+- eos 400d
+- rebel xti
+- xti
+- kiss x
+
+fuzzy_patterns:
+- cannon 400d
+- canon 400 d
+- rebel xti
+- xti
+- kiss x
+
+active: true

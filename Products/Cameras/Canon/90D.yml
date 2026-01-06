@@ -1,0 +1,23 @@
+brand: Canon
+model: 90D
+full_name: Canon EOS 90D
+category: DSLR
+
+pricing:
+  buy_min: 100
+  buy_max: 500
+  sell_target: 650
+
+aliases:
+- 90d
+- eos 90d
+- canon 90d
+
+fuzzy_patterns:
+- cannon 90d
+- canon 90 d
+- eos90d
+- 90d body
+- 90d camera
+
+active: true

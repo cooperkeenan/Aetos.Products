@@ -1,0 +1,21 @@
+brand: Nikon
+model: D850
+full_name: Nikon D850
+category: DSLR
+
+pricing:
+  buy_min: 500
+  buy_max: 1200
+  sell_target: 1500
+
+aliases:
+- d850
+- nikon d850
+
+fuzzy_patterns:
+- nikkon d850
+- nikon d 850
+- d850 body
+- d850 camera
+
+active: true

@@ -1,0 +1,22 @@
+brand: Canon
+model: 60D
+full_name: Canon EOS 60D
+category: DSLR
+
+pricing:
+  buy_min: 60
+  buy_max: 100
+  sell_target: 160
+
+aliases:
+- 60d
+- eos 60d
+- canon 60d
+
+fuzzy_patterns:
+- cannon 60d
+- canon 60 d
+- eos60d
+- 60d body
+
+active: true

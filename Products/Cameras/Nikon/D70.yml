@@ -1,0 +1,20 @@
+brand: Nikon
+model: D70
+full_name: Nikon D70
+category: DSLR
+
+pricing:
+  buy_min: 10
+  buy_max: 30
+  sell_target: 60
+
+aliases:
+- d70
+- nikon d70
+
+fuzzy_patterns:
+- nikkon d70
+- nikon d 70
+- d70 body
+
+active: true

@@ -1,0 +1,25 @@
+brand: Canon
+model: 450D
+full_name: Canon EOS 450D / Rebel XSi
+category: DSLR
+
+pricing:
+  buy_min: 30
+  buy_max: 60
+  sell_target: 100
+
+aliases:
+- 450d
+- eos 450d
+- rebel xsi
+- xsi
+- kiss x2
+
+fuzzy_patterns:
+- cannon 450d
+- canon 450 d
+- rebel xsi
+- xsi
+- kiss x2
+
+active: true

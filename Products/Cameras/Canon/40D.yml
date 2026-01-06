@@ -1,0 +1,22 @@
+brand: Canon
+model: 40D
+full_name: Canon EOS 40D
+category: DSLR
+
+pricing:
+  buy_min: 20
+  buy_max: 50
+  sell_target: 100
+
+aliases:
+- 40d
+- eos 40d
+- canon 40d
+
+fuzzy_patterns:
+- cannon 40d
+- canon 40 d
+- eos40d
+- 40d body
+
+active: true

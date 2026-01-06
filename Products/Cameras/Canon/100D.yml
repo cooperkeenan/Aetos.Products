@@ -1,0 +1,25 @@
+brand: Canon
+model: 100D
+full_name: Canon EOS 100D / Rebel SL1
+category: DSLR
+
+pricing:
+  buy_min: 80
+  buy_max: 150
+  sell_target: 220
+
+aliases:
+- 100d
+- eos 100d
+- rebel sl1
+- sl1
+- kiss x7
+
+fuzzy_patterns:
+- cannon 100d
+- canon 100 d
+- rebel sl1
+- sl1
+- kiss x7
+
+active: true

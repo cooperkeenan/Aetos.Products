@@ -1,0 +1,20 @@
+brand: Nikon
+model: D60
+full_name: Nikon D60
+category: DSLR
+
+pricing:
+  buy_min: 10
+  buy_max: 30
+  sell_target: 60
+
+aliases:
+- d60
+- nikon d60
+
+fuzzy_patterns:
+- nikkon d60
+- nikon d 60
+- d60 body
+
+active: true

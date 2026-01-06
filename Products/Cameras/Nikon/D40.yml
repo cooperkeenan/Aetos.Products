@@ -1,0 +1,20 @@
+brand: Nikon
+model: D40
+full_name: Nikon D40
+category: DSLR
+
+pricing:
+  buy_min: 10
+  buy_max: 30
+  sell_target: 60
+
+aliases:
+- d40
+- nikon d40
+
+fuzzy_patterns:
+- nikkon d40
+- nikon d 40
+- d40 body
+
+active: true

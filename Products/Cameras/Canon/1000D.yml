@@ -1,0 +1,25 @@
+brand: Canon
+model: 1000D
+full_name: Canon EOS 1000D / Rebel XS
+category: DSLR
+
+pricing:
+  buy_min: 40
+  buy_max: 80
+  sell_target: 130
+
+aliases:
+- 1000d
+- eos 1000d
+- rebel xs
+- xs
+- kiss f
+
+fuzzy_patterns:
+- cannon 1000d
+- canon 1000 d
+- rebel xs
+- xs
+- kiss f
+
+active: true

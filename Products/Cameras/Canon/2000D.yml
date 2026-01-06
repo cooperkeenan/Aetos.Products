@@ -1,0 +1,23 @@
+brand: Canon
+model: 2000D
+full_name: Canon EOS 2000D / Rebel T7
+category: DSLR
+
+pricing:
+  buy_min: 80
+  buy_max: 150
+  sell_target: 220
+
+aliases:
+- 2000d
+- eos 2000d
+- rebel t7
+- t7
+
+fuzzy_patterns:
+- cannon 2000d
+- canon 2000 d
+- rebel t7
+- t7
+
+active: true

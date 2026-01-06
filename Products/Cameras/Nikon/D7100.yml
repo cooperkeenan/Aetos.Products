@@ -1,0 +1,20 @@
+brand: Nikon
+model: D7100
+full_name: Nikon D7100
+category: DSLR
+
+pricing:
+  buy_min: 80
+  buy_max: 160
+  sell_target: 250
+
+aliases:
+- d7100
+- nikon d7100
+
+fuzzy_patterns:
+- nikkon d7100
+- nikon d 7100
+- d7100 body
+
+active: true

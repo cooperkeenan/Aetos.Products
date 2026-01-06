@@ -1,0 +1,20 @@
+brand: Nikon
+model: D780
+full_name: Nikon D780
+category: DSLR
+
+pricing:
+  buy_min: 100
+  buy_max: 650
+  sell_target: 900
+
+aliases:
+- d780
+- nikon d780
+
+fuzzy_patterns:
+- nikkon d780
+- nikon d 780
+- d780 body
+
+active: true

@@ -1,0 +1,25 @@
+brand: Canon
+model: 4000D
+full_name: Canon EOS 4000D / Rebel T100
+category: DSLR
+
+pricing:
+  buy_min: 80
+  buy_max: 110
+  sell_target: 190
+
+aliases:
+- 4000d
+- eos 4000d
+- rebel t100
+- t100
+- kiss x90
+
+fuzzy_patterns:
+- cannon 4000d
+- canon 4000 d
+- rebel t100
+- t100
+- kiss x90
+
+active: true

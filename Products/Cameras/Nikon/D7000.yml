@@ -1,0 +1,20 @@
+brand: Nikon
+model: D7000
+full_name: Nikon D7000
+category: DSLR
+
+pricing:
+  buy_min: 80
+  buy_max: 100
+  sell_target: 190
+
+aliases:
+- d7000
+- nikon d7000
+
+fuzzy_patterns:
+- nikkon d7000
+- nikon d 7000
+- d7000 body
+
+active: true

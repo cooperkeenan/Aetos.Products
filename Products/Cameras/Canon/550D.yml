@@ -1,0 +1,25 @@
+brand: Canon
+model: 550D
+full_name: Canon EOS 550D / Rebel T2i
+category: DSLR
+
+pricing:
+  buy_min: 50
+  buy_max: 70
+  sell_target: 100
+
+aliases:
+- 550d
+- eos 550d
+- rebel t2i
+- t2i
+- kiss x4
+
+fuzzy_patterns:
+- cannon 550d
+- canon 550 d
+- rebel t2i
+- t2i
+- kiss x4
+
+active: true

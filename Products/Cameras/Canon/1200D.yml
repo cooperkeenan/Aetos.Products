@@ -1,0 +1,25 @@
+brand: Canon
+model: 1200D
+full_name: Canon EOS 1200D / Rebel T5
+category: DSLR
+
+pricing:
+  buy_min: 70
+  buy_max: 130
+  sell_target: 170
+
+aliases:
+- 1200d
+- eos 1200d
+- rebel t5
+- t5
+- kiss x70
+
+fuzzy_patterns:
+- cannon 1200d
+- canon 1200 d
+- rebel t5
+- t5
+- kiss x70
+
+active: true

@@ -1,0 +1,20 @@
+brand: Nikon
+model: D80
+full_name: Nikon D80
+category: DSLR
+
+pricing:
+  buy_min: 10
+  buy_max: 30
+  sell_target: 60
+
+aliases:
+- d80
+- nikon d80
+
+fuzzy_patterns:
+- nikkon d80
+- nikon d 80
+- d80 body
+
+active: true
