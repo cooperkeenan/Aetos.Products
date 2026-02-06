@@ -1,0 +1,21 @@
+﻿brand: Sony
+model: a6700
+full_name: Sony a6700
+category: Mirrorless
+
+pricing:
+  buy_min: 80
+  buy_max: 700
+  sell_target: 900
+
+aliases:
+- a6700
+- sony a6700
+- alpha a6700
+
+fuzzy_patterns:
+- sony a 6700
+- alpha a 6700
+- a six seven hundred
+
+active: true

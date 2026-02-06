@@ -1,0 +1,23 @@
+brand: Sony
+model: a37
+full_name: Sony Alpha a37
+category: SLT
+
+pricing:
+  buy_min: 30
+  buy_max: 90
+  sell_target: 130
+
+a1iases:
+- a37
+- sony a37
+- alpha a37
+- sony alpha a37
+- slt a37
+
+fuzzy_patterns:
+- sony a 37
+- sonya37
+- sony alpha a 37
+
+active: true

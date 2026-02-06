@@ -1,0 +1,21 @@
+brand: Sony
+model: a7R II
+full_name: Sony Alpha a7R II
+category: Mirrorless
+
+pricing:
+  buy_min: 80
+  buy_max: 400
+  sell_target: 550
+
+aliases:
+- a7r ii
+- a7r mark ii
+- a7r mk2
+- sony a7r ii
+
+fuzzy_patterns:
+- sony a7rii
+- sony a 7 r ii
+
+active: true

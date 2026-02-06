@@ -1,0 +1,21 @@
+﻿brand: Sony
+model: a6100
+full_name: Sony a6100
+category: Mirrorless
+
+pricing:
+  buy_min: 80
+  buy_max: 350
+  sell_target: 420
+
+aliases:
+- a6100
+- sony a6100
+- alpha a6100
+
+fuzzy_patterns:
+- sony a 6100
+- alpha a 6100
+- a six one hundred
+
+active: true

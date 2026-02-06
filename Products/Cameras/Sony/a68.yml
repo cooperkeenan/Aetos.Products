@@ -1,0 +1,23 @@
+brand: Sony
+model: a68
+full_name: Sony Alpha a68
+category: SLT
+
+pricing:
+  buy_min: 30
+  buy_max: 120
+  sell_target: 160
+
+aliases:
+- a68
+- sony a68
+- alpha a68
+- sony alpha a68
+- slt a68
+
+fuzzy_patterns:
+- sony a 68
+- sonya68
+- sony alpha a 68
+
+active: true

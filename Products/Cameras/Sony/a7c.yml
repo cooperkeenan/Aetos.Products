@@ -1,0 +1,18 @@
+brand: Sony
+model: a7C
+full_name: Sony Alpha a7C
+category: Mirrorless
+
+pricing:
+  buy_min: 80
+  buy_max: 500
+  sell_target: 800
+
+aliases:
+- a7c
+- sony a7c
+
+fuzzy_patterns:
+- sony a 7 c
+
+active: true

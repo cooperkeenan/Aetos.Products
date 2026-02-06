@@ -1,0 +1,25 @@
+brand: Sony
+model: a99 II
+full_name: Sony Alpha a99 II
+category: SLT
+
+pricing:
+  buy_min: 200
+  buy_max: 500
+  sell_target: 700
+
+aliases:
+- a99 ii
+- a99 mark ii
+- a99 m2
+- sony a99 ii
+- sony alpha a99 ii
+- slt a99 ii
+
+fuzzy_patterns:
+- sony a 99 ii
+- sony a99ii
+- sony a99 mark 2
+- sony alpha a99 m2
+
+active: true

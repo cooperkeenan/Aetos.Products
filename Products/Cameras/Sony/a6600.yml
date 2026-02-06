@@ -1,0 +1,21 @@
+﻿brand: Sony
+model: a6600
+full_name: Sony a6600
+category: Mirrorless
+
+pricing:
+  buy_min: 80
+  buy_max: 550
+  sell_target: 700
+
+aliases:
+- a6600
+- sony a6600
+- alpha a6600
+
+fuzzy_patterns:
+- sony a 6600
+- alpha a 6600
+- a six six hundred
+
+active: true

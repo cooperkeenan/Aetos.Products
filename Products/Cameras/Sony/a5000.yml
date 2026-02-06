@@ -1,0 +1,22 @@
+﻿brand: Sony
+model: a5000
+full_name: Sony a5000
+category: Mirrorless
+
+pricing:
+  buy_min: 80
+  buy_max: 150
+  sell_target: 195
+
+aliases:
+- a5000
+- sony a5000
+- alpha a5000
+- alpha5000
+
+fuzzy_patterns:
+- sony a 5000
+- alpha a 5000
+- a five thousand
+
+active: true

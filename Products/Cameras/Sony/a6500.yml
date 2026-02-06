@@ -1,0 +1,21 @@
+﻿brand: Sony
+model: a6500
+full_name: Sony a6500
+category: Mirrorless
+
+pricing:
+  buy_min: 80
+  buy_max: 320
+  sell_target: 400
+
+aliases:
+- a6500
+- sony a6500
+- alpha a6500
+
+fuzzy_patterns:
+- sony a 6500
+- alpha a 6500
+- a six five hundred
+
+active: true

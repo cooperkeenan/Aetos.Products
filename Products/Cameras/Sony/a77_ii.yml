@@ -1,0 +1,25 @@
+brand: Sony
+model: a77 II
+full_name: Sony Alpha a77 II
+category: SLT
+
+pricing:
+  buy_min: 80
+  buy_max: 350
+  sell_target: 450
+
+aliases:
+- a77 ii
+- a77 mark ii
+- a77 m2
+- sony a77 ii
+- sony alpha a77 ii
+- slt a77 ii
+
+fuzzy_patterns:
+- sony a 77 ii
+- sony a77ii
+- sony a77 mark 2
+- sony alpha a77 m2
+
+active: true

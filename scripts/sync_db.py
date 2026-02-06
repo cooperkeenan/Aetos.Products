@@ -1,52 +1,106 @@
 #!/usr/bin/env python3
 """
-sync_to_db.py - Sync YAML product files to Neon database
+sync_to_db.py - Sync YAML product and filter files to Neon database
+
+Scans the Products/ folder recursively for *.yml files.
+- Product YAML schema:
+  brand, model, full_name, category, pricing{buy_min,buy_max,sell_target}, active
+  optional: aliases[], fuzzy_patterns[]
+- Filter YAML schema:
+  keywords[], optional description
+  inferred filter_type from filename/path (boost/reject)
 """
 
 import os
 import sys
-import yaml
-import psycopg2
 from pathlib import Path
+
+import psycopg2
+import yaml
 from dotenv import load_dotenv
-from datetime import datetime
 
 # Load environment variables
 load_dotenv()
 
-DATABASE_URL = os.getenv('DATABASE_URL')
+DATABASE_URL = os.getenv("DATABASE_URL")
 if not DATABASE_URL:
-    print("❌ DATABASE_URL not found in .env file!")
+    print("DATABASE_URL not found in .env file.")
     sys.exit(1)
 
 
 def connect_db():
-    """Connect to Neon database"""
+    """Connect to Neon database."""
     try:
-        conn = psycopg2.connect(DATABASE_URL)
-        return conn
+        return psycopg2.connect(DATABASE_URL)
     except Exception as e:
-        print(f"❌ Database connection failed: {e}")
+        print(f"Database connection failed: {e}")
         sys.exit(1)
 
 
-def load_yaml_file(filepath):
-    """Load and parse YAML file"""
+def load_yaml_file(filepath: Path):
+    """Load and parse YAML file."""
     try:
-        with open(filepath, 'r') as f:
+        with filepath.open("r", encoding="utf-8") as f:
             return yaml.safe_load(f)
     except Exception as e:
-        print(f"❌ Error reading {filepath}: {e}")
+        print(f"Error reading {filepath}: {e}")
         return None
 
 
-def upsert_product(cursor, product_data):
-    """Insert or update product"""
+def is_product_yaml(data: dict) -> bool:
+    """Heuristic to detect product YAML files."""
+    if not isinstance(data, dict):
+        return False
+
+    required_top = {"brand", "model", "full_name", "category", "pricing", "active"}
+    if not required_top.issubset(data.keys()):
+        return False
+
+    pricing = data.get("pricing")
+    if not isinstance(pricing, dict):
+        return False
+
+    required_pricing = {"buy_min", "buy_max", "sell_target"}
+    return required_pricing.issubset(pricing.keys())
+
+
+def is_filter_yaml(data: dict) -> bool:
+    """Heuristic to detect filter YAML files (boost/reject keywords)."""
+    if not isinstance(data, dict):
+        return False
+    keywords = data.get("keywords")
+    return isinstance(keywords, list)
+
+
+def infer_filter_type(filepath: Path) -> str | None:
+    """
+    Infer filter type from file name/path.
+    Looks for 'boost' or 'reject' anywhere in the filename or parent folders.
+    """
+    haystack = " ".join(
+        [filepath.name.lower()] + [p.name.lower() for p in filepath.parents]
+    )
+    if "reject" in haystack:
+        return "reject"
+    if "boost" in haystack:
+        return "boost"
+    return None
+
+
+def upsert_product(cursor, product_data: dict) -> int | None:
+    """Insert or update product and return product id."""
     try:
-        cursor.execute("""
-            INSERT INTO products (brand, model, full_name, category, buy_price_min, buy_price_max, sell_target, active)
-            VALUES (%(brand)s, %(model)s, %(full_name)s, %(category)s, %(buy_min)s, %(buy_max)s, %(sell_target)s, %(active)s)
-            ON CONFLICT (brand, model) 
+        cursor.execute(
+            """
+            INSERT INTO products (
+                brand, model, full_name, category,
+                buy_price_min, buy_price_max, sell_target, active
+            )
+            VALUES (
+                %(brand)s, %(model)s, %(full_name)s, %(category)s,
+                %(buy_min)s, %(buy_max)s, %(sell_target)s, %(active)s
+            )
+            ON CONFLICT (brand, model)
             DO UPDATE SET
                 full_name = EXCLUDED.full_name,
                 category = EXCLUDED.category,
@@ -56,152 +110,152 @@ def upsert_product(cursor, product_data):
                 active = EXCLUDED.active,
                 updated_at = CURRENT_TIMESTAMP
             RETURNING id;
-        """, {
-            'brand': product_data['brand'],
-            'model': product_data['model'],
-            'full_name': product_data['full_name'],
-            'category': product_data['category'],
-            'buy_min': product_data['pricing']['buy_min'],
-            'buy_max': product_data['pricing']['buy_max'],
-            'sell_target': product_data['pricing']['sell_target'],
-            'active': product_data['active']
-        })
-        
-        product_id = cursor.fetchone()[0]
-        return product_id
+            """,
+            {
+                "brand": product_data["brand"],
+                "model": product_data["model"],
+                "full_name": product_data["full_name"],
+                "category": product_data["category"],
+                "buy_min": product_data["pricing"].get("buy_min"),
+                "buy_max": product_data["pricing"].get("buy_max"),
+                "sell_target": product_data["pricing"].get("sell_target"),
+                "active": product_data.get("active", True),
+            },
+        )
+        return cursor.fetchone()[0]
     except Exception as e:
-        print(f"❌ Error upserting product {product_data['brand']} {product_data['model']}: {e}")
+        print(
+            f"Error upserting product {product_data.get('brand')} {product_data.get('model')}: {e}"
+        )
         return None
 
 
-def sync_aliases(cursor, product_id, aliases):
-    """Delete old aliases and insert new ones"""
+def sync_aliases(cursor, product_id: int, aliases: list[str]):
+    """Delete old aliases and insert new ones."""
     try:
-        # Delete existing aliases
-        cursor.execute("DELETE FROM product_aliases WHERE product_id = %s", (product_id,))
-        
-        # Insert new aliases
-        for alias in aliases:
-            cursor.execute("""
-                INSERT INTO product_aliases (product_id, alias)
-                VALUES (%s, %s)
-            """, (product_id, alias))
+        cursor.execute(
+            "DELETE FROM product_aliases WHERE product_id = %s", (product_id,)
+        )
+        for alias in aliases or []:
+            cursor.execute(
+                "INSERT INTO product_aliases (product_id, alias) VALUES (%s, %s)",
+                (product_id, alias),
+            )
     except Exception as e:
-        print(f"❌ Error syncing aliases for product {product_id}: {e}")
+        print(f"Error syncing aliases for product {product_id}: {e}")
 
 
-def sync_fuzzy_patterns(cursor, product_id, patterns):
-    """Delete old patterns and insert new ones"""
+def sync_fuzzy_patterns(cursor, product_id: int, patterns: list[str]):
+    """Delete old patterns and insert new ones."""
     try:
-        # Delete existing patterns
-        cursor.execute("DELETE FROM product_fuzzy_patterns WHERE product_id = %s", (product_id,))
-        
-        # Insert new patterns
-        for pattern in patterns:
-            cursor.execute("""
-                INSERT INTO product_fuzzy_patterns (product_id, pattern)
-                VALUES (%s, %s)
-            """, (product_id, pattern))
+        cursor.execute(
+            "DELETE FROM product_fuzzy_patterns WHERE product_id = %s", (product_id,)
+        )
+        for pattern in patterns or []:
+            cursor.execute(
+                "INSERT INTO product_fuzzy_patterns (product_id, pattern) VALUES (%s, %s)",
+                (product_id, pattern),
+            )
     except Exception as e:
-        print(f"❌ Error syncing fuzzy patterns for product {product_id}: {e}")
+        print(f"Error syncing fuzzy patterns for product {product_id}: {e}")
 
 
-def sync_filter_keywords(cursor, filter_data, filter_type):
-    """Sync filter keywords (reject or boost)"""
+def sync_filter_keywords(cursor, filter_data: dict, filter_type: str):
+    """Sync filter keywords (reject or boost)."""
     try:
-        keywords = filter_data.get('keywords', [])
-        description = filter_data.get('description', '')
-        
+        keywords = filter_data.get("keywords", []) or []
+        description = filter_data.get("description", "") or ""
+
         for keyword in keywords:
-            cursor.execute("""
+            cursor.execute(
+                """
                 INSERT INTO filter_keywords (keyword, filter_type, description)
                 VALUES (%s, %s, %s)
-                ON CONFLICT (keyword, filter_type) 
+                ON CONFLICT (keyword, filter_type)
                 DO UPDATE SET description = EXCLUDED.description
-            """, (keyword, filter_type, description))
+                """,
+                (keyword, filter_type, description),
+            )
     except Exception as e:
-        print(f"❌ Error syncing {filter_type} keywords: {e}")
+        print(f"Error syncing {filter_type} keywords: {e}")
 
 
 def main():
-    """Main sync function"""
-    print("📂 Scanning YAML files...")
-    
-    # Connect to database
+    products_root = Path("Products")
+    if not products_root.exists():
+        print("Products/ folder not found. Nothing to sync.")
+        sys.exit(0)
+
+    print(f"Scanning YAML files under: {products_root.resolve()}")
+
     conn = connect_db()
     cursor = conn.cursor()
-    
+
     products_synced = 0
+    filter_keywords_synced = 0
+    skipped = 0
     errors = 0
-    
+
     try:
-        # Sync Canon cameras
-        canon_dir = Path('Products/Cameras/Canon')
-        if canon_dir.exists():
-            print(f"\n📷 Syncing Canon cameras from {canon_dir}")
-            for yaml_file in canon_dir.glob('*.yml'):
-                product_data = load_yaml_file(yaml_file)
-                if product_data:
-                    product_id = upsert_product(cursor, product_data)
-                    if product_id:
-                        sync_aliases(cursor, product_id, product_data.get('aliases', []))
-                        sync_fuzzy_patterns(cursor, product_id, product_data.get('fuzzy_patterns', []))
-                        print(f"  ✅ {product_data['brand']} {product_data['model']}")
-                        products_synced += 1
-                    else:
-                        errors += 1
-        
-        # Sync Nikon cameras
-        nikon_dir = Path('Products/Cameras/Nikon')
-        if nikon_dir.exists():
-            print(f"\n📷 Syncing Nikon cameras from {nikon_dir}")
-            for yaml_file in nikon_dir.glob('*.yml'):
-                product_data = load_yaml_file(yaml_file)
-                if product_data:
-                    product_id = upsert_product(cursor, product_data)
-                    if product_id:
-                        sync_aliases(cursor, product_id, product_data.get('aliases', []))
-                        sync_fuzzy_patterns(cursor, product_id, product_data.get('fuzzy_patterns', []))
-                        print(f"  ✅ {product_data['brand']} {product_data['model']}")
-                        products_synced += 1
-                    else:
-                        errors += 1
-        
-        # Sync filter keywords (reject)
-        reject_file = Path('Products/Cameras/Matching/filters_reject.yml')
-        if reject_file.exists():
-            print(f"\n🚫 Syncing rejection filters")
-            reject_data = load_yaml_file(reject_file)
-            if reject_data:
-                sync_filter_keywords(cursor, reject_data, 'reject')
-                print(f"  ✅ {len(reject_data.get('keywords', []))} reject keywords")
-        
-        # Sync filter keywords (boost)
-        boost_file = Path('Products/Cameras/Matching/filters_boost.yml')
-        if boost_file.exists():
-            print(f"\n⭐ Syncing boost filters")
-            boost_data = load_yaml_file(boost_file)
-            if boost_data:
-                sync_filter_keywords(cursor, boost_data, 'boost')
-                print(f"  ✅ {len(boost_data.get('keywords', []))} boost keywords")
-        
-        # Commit transaction
+        yaml_files = sorted(products_root.rglob("*.yml"))
+
+        for yaml_file in yaml_files:
+            data = load_yaml_file(yaml_file)
+            if data is None:
+                errors += 1
+                continue
+
+            # Product file
+            if is_product_yaml(data):
+                product_id = upsert_product(cursor, data)
+                if product_id:
+                    sync_aliases(cursor, product_id, data.get("aliases", []))
+                    sync_fuzzy_patterns(
+                        cursor, product_id, data.get("fuzzy_patterns", [])
+                    )
+                    print(
+                        f"Synced product: {data['brand']} {data['model']} ({yaml_file})"
+                    )
+                    products_synced += 1
+                else:
+                    errors += 1
+                continue
+
+            # Filter file
+            if is_filter_yaml(data):
+                filter_type = infer_filter_type(yaml_file)
+                if not filter_type:
+                    skipped += 1
+                    print(f"Skipped filter file (unknown type): {yaml_file}")
+                    continue
+
+                sync_filter_keywords(cursor, data, filter_type)
+                count = len(data.get("keywords", []) or [])
+                filter_keywords_synced += count
+                print(f"Synced {filter_type} keywords: {count} ({yaml_file})")
+                continue
+
+            # Unknown YAML schema
+            skipped += 1
+            print(f"Skipped unknown YAML schema: {yaml_file}")
+
         conn.commit()
-        
-        # Summary
-        print(f"\n" + "="*50)
-        print(f"📊 Summary:")
-        print(f"   Products synced: {products_synced}")
-        print(f"   Errors: {errors}")
-        
+
+        print("\n" + "=" * 60)
+        print("Summary")
+        print(f"Products synced: {products_synced}")
+        print(f"Filter keywords synced: {filter_keywords_synced}")
+        print(f"Skipped files: {skipped}")
+        print(f"Errors: {errors}")
+
     except Exception as e:
         conn.rollback()
-        print(f"\n❌ Sync failed: {e}")
+        print(f"Sync failed: {e}")
         sys.exit(1)
     finally:
         cursor.close()
         conn.close()
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     main()

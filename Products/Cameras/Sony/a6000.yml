@@ -1,0 +1,21 @@
+﻿brand: Sony
+model: a6000
+full_name: Sony a6000
+category: Mirrorless
+
+pricing:
+  buy_min: 80
+  buy_max: 270
+  sell_target: 360
+
+aliases:
+- a6000
+- sony a6000
+- alpha a6000
+
+fuzzy_patterns:
+- sony a 6000
+- alpha a 6000
+- a six thousand
+
+active: true

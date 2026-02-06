@@ -1,0 +1,21 @@
+brand: Sony
+model: a7R III
+full_name: Sony Alpha a7R III
+category: Mirrorless
+
+pricing:
+  buy_min: 80
+  buy_max: 500
+  sell_target: 750
+
+aliases:
+- a7r iii
+- a7r mark iii
+- a7r mk3
+- sony a7r iii
+
+fuzzy_patterns:
+- sony a7riii
+- sony a 7 r iii
+
+active: true

@@ -1,0 +1,21 @@
+brand: Sony
+model: a7R V
+full_name: Sony Alpha a7R V
+category: Mirrorless
+
+pricing:
+  buy_min: 400
+  buy_max: 1500
+  sell_target: 1900
+
+aliases:
+- a7r v
+- a7r mark v
+- a7r mk5
+- sony a7r v
+
+fuzzy_patterns:
+- sony a7rv
+- sony a 7 r v
+
+active: true

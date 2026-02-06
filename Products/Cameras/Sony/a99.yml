@@ -1,0 +1,23 @@
+brand: Sony
+model: a99
+full_name: Sony Alpha a99
+category: SLT
+
+pricing:
+  buy_min: 80
+  buy_max: 400
+  sell_target: 500
+
+aliases:
+- a99
+- sony a99
+- alpha a99
+- sony alpha a99
+- slt a99
+
+fuzzy_patterns:
+- sony a 99
+- sonya99
+- sony alpha a 99
+
+active: true

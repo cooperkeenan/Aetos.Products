@@ -1,0 +1,23 @@
+brand: Sony
+model: a58
+full_name: Sony Alpha a58
+category: SLT
+
+pricing:
+  buy_min: 50
+  buy_max: 150
+  sell_target: 190
+
+aliases:
+- a58
+- sony a58
+- alpha a58
+- sony alpha a58
+- slt a58
+
+fuzzy_patterns:
+- sony a 58
+- sonya58
+- sony alpha a 58
+
+active: true

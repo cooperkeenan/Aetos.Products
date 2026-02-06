@@ -1,0 +1,21 @@
+﻿brand: Sony
+model: a6300
+full_name: Sony a6300
+category: Mirrorless
+
+pricing:
+  buy_min: 80
+  buy_max: 270
+  sell_target: 350
+
+aliases:
+- a6300
+- sony a6300
+- alpha a6300
+
+fuzzy_patterns:
+- sony a 6300
+- alpha a 6300
+- a six three hundred
+
+active: true

@@ -1,0 +1,20 @@
+brand: Sony
+model: a7
+full_name: Sony Alpha a7
+category: Mirrorless
+
+pricing:
+  buy_min: 250
+  buy_max: 400
+  sell_target: 500
+
+aliases:
+- a7
+- sony a7
+- alpha a7
+
+fuzzy_patterns:
+- sony a 7
+- sony alpha 7
+
+active: false

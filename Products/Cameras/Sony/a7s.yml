@@ -1,0 +1,18 @@
+brand: Sony
+model: a7S
+full_name: Sony Alpha a7S
+category: Mirrorless
+
+pricing:
+  buy_min: 80
+  buy_max: 300
+  sell_target: 400
+
+aliases:
+- a7s
+- sony a7s
+
+fuzzy_patterns:
+- sony a 7 s
+
+active: true

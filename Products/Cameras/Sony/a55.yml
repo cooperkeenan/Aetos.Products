@@ -1,0 +1,23 @@
+brand: Sony
+model: a55
+full_name: Sony Alpha a55
+category: SLT
+
+pricing:
+  buy_min: 30
+  buy_max: 100
+  sell_target: 140
+
+aliases:
+- a55
+- sony a55
+- alpha a55
+- sony alpha a55
+- slt a55
+
+fuzzy_patterns:
+- sony a 55
+- sonya55
+- sony alpha a 55
+
+active: true

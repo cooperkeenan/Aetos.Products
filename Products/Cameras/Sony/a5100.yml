@@ -1,0 +1,22 @@
+﻿brand: Sony
+model: a5100
+full_name: Sony a5100
+category: Mirrorless
+
+pricing:
+  buy_min: 80
+  buy_max: 210
+  sell_target: 250
+
+aliases:
+- a5100
+- sony a5100
+- alpha a5100
+- alpha5100
+
+fuzzy_patterns:
+- sony a 5100
+- alpha a 5100
+- a five one hundred
+
+active: true

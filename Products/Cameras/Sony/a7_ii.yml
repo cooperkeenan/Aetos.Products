@@ -1,0 +1,21 @@
+brand: Sony
+model: a7 II
+full_name: Sony Alpha a7 II
+category: Mirrorless
+
+pricing:
+  buy_min: 100
+  buy_max: 400
+  sell_target: 550
+
+aliases:
+- a7 ii
+- a7 mark ii
+- a7 mk2
+- sony a7 ii
+
+fuzzy_patterns:
+- sony a7ii
+- sony a 7 ii
+
+active: true

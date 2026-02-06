@@ -1,0 +1,23 @@
+brand: Sony
+model: a33
+full_name: Sony Alpha a33
+category: SLT
+
+pricing:
+  buy_min: 30
+  buy_max: 90
+  sell_target: 130
+
+aliases:
+- a33
+- sony a33
+- alpha a33
+- sony alpha a33
+- slt a33
+
+fuzzy_patterns:
+- sony a 33
+- sonya33
+- sony alpha a 33
+
+active: true

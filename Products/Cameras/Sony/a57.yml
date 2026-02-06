@@ -1,0 +1,23 @@
+brand: Sony
+model: a57
+full_name: Sony Alpha a57
+category: SLT
+
+pricing:
+  buy_min:
+  buy_max:
+  sell_target:
+
+aliases:
+- a57
+- sony a57
+- alpha a57
+- sony alpha a57
+- slt a57
+
+fuzzy_patterns:
+- sony a 57
+- sonya57
+- sony alpha a 57
+
+active: false

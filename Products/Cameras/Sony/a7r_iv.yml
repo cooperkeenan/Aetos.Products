@@ -1,0 +1,21 @@
+brand: Sony
+model: a7R IV
+full_name: Sony Alpha a7R IV
+category: Mirrorless
+
+pricing:
+  buy_min: 200
+  buy_max: 800
+  sell_target: 1100
+
+aliases:
+- a7r iv
+- a7r mark iv
+- a7r mk4
+- sony a7r iv
+
+fuzzy_patterns:
+- sony a7riv
+- sony a 7 r iv
+
+active: true

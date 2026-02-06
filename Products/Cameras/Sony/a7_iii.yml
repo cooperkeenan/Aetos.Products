@@ -1,0 +1,21 @@
+brand: Sony
+model: a7 III
+full_name: Sony Alpha a7 III
+category: Mirrorless
+
+pricing:
+  buy_min: 80
+  buy_max: 550
+  sell_target: 750
+
+aliases:
+- a7 iii
+- a7 mark iii
+- a7 mk3
+- sony a7 iii
+
+fuzzy_patterns:
+- sony a7iii
+- sony a 7 iii
+
+active: true

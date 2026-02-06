@@ -1,0 +1,21 @@
+﻿brand: Sony
+model: a6400
+full_name: Sony a6400
+category: Mirrorless
+
+pricing:
+  buy_min: 80
+  buy_max: 400
+  sell_target: 500
+
+aliases:
+- a6400
+- sony a6400
+- alpha a6400
+
+fuzzy_patterns:
+- sony a 6400
+- alpha a 6400
+- a six four hundred
+
+active: true

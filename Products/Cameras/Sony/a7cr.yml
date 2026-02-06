@@ -1,0 +1,18 @@
+brand: Sony
+model: a7CR
+full_name: Sony Alpha a7CR
+category: Mirrorless
+
+pricing:
+  buy_min: 200
+  buy_max: 1500
+  sell_target: 1800
+
+aliases:
+- a7cr
+- sony a7cr
+
+fuzzy_patterns:
+- sony a 7 cr
+
+active: true

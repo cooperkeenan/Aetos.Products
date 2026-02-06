@@ -1,0 +1,23 @@
+brand: Sony
+model: a65
+full_name: Sony Alpha a65
+category: SLT
+
+pricing:
+  buy_min: 60
+  buy_max: 150
+  sell_target: 200
+
+aliases:
+- a65
+- sony a65
+- alpha a65
+- sony alpha a65
+- slt a65
+
+fuzzy_patterns:
+- sony a 65
+- sonya65
+- sony alpha a 65
+
+active: true

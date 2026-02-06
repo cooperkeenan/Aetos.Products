@@ -1,0 +1,23 @@
+brand: Sony
+model: a77
+full_name: Sony Alpha a77
+category: SLT
+
+pricing:
+  buy_min: 80
+  buy_max: 200
+  sell_target: 300
+
+aliases:
+- a77
+- sony a77
+- alpha a77
+- sony alpha a77
+- slt a77
+
+fuzzy_patterns:
+- sony a 77
+- sonya77
+- sony alpha a 77
+
+active: true

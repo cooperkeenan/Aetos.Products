@@ -1,0 +1,19 @@
+brand: Sony
+model: a7R
+full_name: Sony Alpha a7R
+category: Mirrorless
+
+pricing:
+  buy_min: 80
+  buy_max: 250
+  sell_target: 400
+
+aliases:
+- a7r
+- sony a7r
+- alpha a7r
+
+fuzzy_patterns:
+- sony a 7 r
+
+active: true
