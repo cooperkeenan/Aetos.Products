@@ -1,0 +1,23 @@
+brand: Canon
+model: 5D Mark II
+full_name: Canon EOS 5D Mark II
+category: DSLR
+
+pricing:
+  buy_min: 80
+  buy_max: 120
+  sell_target: 170
+
+aliases:
+- 5d mark ii
+- 5d mk2
+- 5d mkii
+- eos 5d mark ii
+
+fuzzy_patterns:
+- canon 5d mk2
+- canon 5d mkii
+- 5d mark 2
+- eos 5d mk ii
+
+active: true

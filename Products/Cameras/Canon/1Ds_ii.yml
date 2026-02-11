@@ -1,0 +1,26 @@
+brand: Canon
+model: 1Ds Mark II
+full_name: Canon EOS-1Ds Mark II
+category: DSLR
+
+pricing:
+  buy_min: 80
+  buy_max: 190
+  sell_target: 250
+
+aliases:
+- 1ds mark ii
+- 1ds mk2
+- 1ds mkii
+- eos 1ds mark ii
+- canon 1ds mark 2
+- eos-1ds mark ii
+
+fuzzy_patterns:
+- canon 1ds mk2
+- canon 1ds mkii
+- 1ds mark 2
+- 1ds mk ii
+- eos 1ds mk2
+
+active: true

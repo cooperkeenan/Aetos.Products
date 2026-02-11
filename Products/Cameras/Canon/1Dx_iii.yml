@@ -1,0 +1,24 @@
+brand: Canon
+model: 1D X Mark III
+full_name: Canon EOS-1D X Mark III
+category: DSLR
+
+pricing:
+  buy_min: 80
+  buy_max: 1000
+  sell_target: 1500
+
+aliases:
+- 1dx mark iii
+- 1dx mk3
+- 1d x mark iii
+- 1d x mk3
+- eos 1dx mark iii
+
+fuzzy_patterns:
+- canon 1dx mk3
+- canon 1d x mkiii
+- 1dx mark 3
+- 1d x mk iii
+
+active: true

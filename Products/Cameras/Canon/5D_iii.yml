@@ -1,0 +1,23 @@
+brand: Canon
+model: 5D Mark III
+full_name: Canon EOS 5D Mark III
+category: DSLR
+
+pricing:
+  buy_min: 80
+  buy_max: 220
+  sell_target: 320
+
+aliases:
+- 5d mark iii
+- 5d mk3
+- 5d mkiii
+- eos 5d mark iii
+
+fuzzy_patterns:
+- canon 5d mk3
+- canon 5d mkiii
+- 5d mark 3
+- eos 5d mk iii
+
+active: true

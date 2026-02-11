@@ -1,0 +1,23 @@
+brand: Canon
+model: 6D Mark II
+full_name: Canon EOS 6D Mark II
+category: DSLR
+
+pricing:
+  buy_min: 80
+  buy_max: 350
+  sell_target: 550
+
+aliases:
+- 6d mark ii
+- 6d mk2
+- 6d mkii
+- eos 6d mark ii
+
+fuzzy_patterns:
+- canon 6d mk2
+- canon 6d mkii
+- 6d mark 2
+- eos 6d mk ii
+
+active: true

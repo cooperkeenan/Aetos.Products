@@ -1,0 +1,24 @@
+brand: Canon
+model: 1D Mark IV
+full_name: Canon EOS-1D Mark IV
+category: DSLR
+
+pricing:
+  buy_min: 80
+  buy_max: 250
+  sell_target: 350
+
+aliases:
+- 1d mark iv
+- 1d mk4
+- 1d mkiv
+- eos 1d mark iv
+- canon 1d mark 4
+
+fuzzy_patterns:
+- canon 1d mk4
+- canon 1d mkiv
+- 1d mark 4
+- eos 1d mk iv
+
+active: true

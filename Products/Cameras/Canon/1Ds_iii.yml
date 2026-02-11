@@ -1,0 +1,26 @@
+brand: Canon
+model: 1Ds Mark III
+full_name: Canon EOS-1Ds Mark III
+category: DSLR
+
+pricing:
+  buy_min: 80
+  buy_max: 200
+  sell_target: 250
+
+aliases:
+- 1ds mark iii
+- 1ds mk3
+- 1ds mkiii
+- eos 1ds mark iii
+- canon 1ds mark 3
+- eos-1ds mark iii
+
+fuzzy_patterns:
+- canon 1ds mk3
+- canon 1ds mkiii
+- 1ds mark 3
+- 1ds mk iii
+- eos 1ds mk3
+
+active: true

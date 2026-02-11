@@ -1,0 +1,23 @@
+brand: Canon
+model: 5D Mark IV
+full_name: Canon EOS 5D Mark IV
+category: DSLR
+
+pricing:
+  buy_min: 80
+  buy_max: 400
+  sell_target: 590
+
+aliases:
+- 5d mark iv
+- 5d mk4
+- 5d mkiv
+- eos 5d mark iv
+
+fuzzy_patterns:
+- canon 5d mk4
+- canon 5d mkiv
+- 5d mark 4
+- eos 5d mk iv
+
+active: true

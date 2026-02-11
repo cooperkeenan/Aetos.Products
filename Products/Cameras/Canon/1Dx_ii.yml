@@ -1,0 +1,24 @@
+brand: Canon
+model: 1D X Mark II
+full_name: Canon EOS-1D X Mark II
+category: DSLR
+
+pricing:
+  buy_min: 120
+  buy_max: 600
+  sell_target: 800
+
+aliases:
+- 1dx mark ii
+- 1dx mk2
+- 1d x mark ii
+- 1d x mk2
+- eos 1dx mark ii
+
+fuzzy_patterns:
+- canon 1dx mk2
+- canon 1d x mk ii
+- 1dx mkii
+- 1d x mark 2
+
+active: true

@@ -1,0 +1,26 @@
+brand: Canon
+model: 1Ds
+full_name: Canon EOS-1Ds
+category: DSLR
+
+pricing:
+  buy_min: 80
+  buy_max: 120
+  sell_target: 180
+
+aliases:
+- 1ds
+- 1 ds
+- eos 1ds
+- canon 1ds
+- canon eos 1ds
+- eos-1ds
+
+fuzzy_patterns:
+- cannon 1ds
+- canon 1 ds
+- eos 1 ds
+- eos- 1ds
+- canon eos-1ds
+
+active: true

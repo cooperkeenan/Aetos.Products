@@ -1,0 +1,21 @@
+brand: Canon
+model: 6D
+full_name: Canon EOS 6D
+category: DSLR
+
+pricing:
+  buy_min: 80
+  buy_max: 150
+  sell_target: 250
+
+aliases:
+- 6d
+- eos 6d
+- canon 6d
+
+fuzzy_patterns:
+- canon 6 d
+- eos 6 d
+- cannon 6d
+
+active: true
